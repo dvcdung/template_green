@@ -1,0 +1,152 @@
+:root {
+    --topic_color: rgb(0, 255, 0);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER-ALL */
+.container-all {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+header {
+    position: absolute;
+    background-color: var(--topic_color);
+    height: 70px;
+    width: 100%;
+}
+.container-middle {
+    height: 100%;
+    width: 100%;
+    padding: 70px 0 150px 0;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color:  var(--topic_color);
+    height: 150px;
+    width: 100%;
+}
+.container-main {
+    width: 100%;
+    height: 100%;
+}
+.container-main > .container-fluid {
+    display: flex;
+    height: 100%;
+    padding: 0;
+}
+.container-main > .container-fluid > div {
+    border: solid 1px black;
+    height: 100%;
+}
+
+.nav-left, .nav-right {
+    background-color: bisque;
+    width: 94%;
+    height: 96%;
+    margin: auto;
+    margin-top: 2%;
+    position: relative;
+}
+.nav-left {
+    animation: nav_animation_l 1s;
+}
+.nav-right {
+    animation: nav_animation_r 1s;
+}
+header {
+    animation: header_animation 1s;
+}
+footer {
+    animation: footer_animation 1s;
+}
+
+
+@keyframes nav_animation_l {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+}
+@keyframes nav_animation_r {
+    0% {
+        right: -100%;
+    }
+    50% {
+        right: 0%;
+    }
+}
+@keyframes header_animation {
+    0% {
+        top: -70px;
+    }
+    50% {
+        top: 0;
+    }
+}
+@keyframes footer_animation {
+    0% {
+        bottom: -150px;
+    }
+    50% {
+        bottom: 0%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-main > .container-fluid {
+        display: block;
+    }
+    .container-main > .container-fluid > div {
+        display: block;
+    }
+    .container-main > .container-fluid {
+        display: flex;
+    }
+    .content-right, .content-left {
+        width: 35%;
+    }
+    .content-middle {
+        width: 30%;
+    }
+}
+@media screen and (max-width: 540px) {
+    .content-right, .content-left {
+        width: 45%;
+    }
+    .content-middle {
+        width: 10%;
+    }
+}
+
+button#logo-menu {
+    border: solid 1px red;
+    background-color: aliceblue;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+button#logo-menu:hover {
+    transform: scale(1.2);
+    transition: 300ms;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
