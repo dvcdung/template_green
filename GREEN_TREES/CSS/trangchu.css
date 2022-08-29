@@ -1,0 +1,10 @@
+body {
+    position: relative;
+    overflow: hidden;
+}
+main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 221, 0);
+}
