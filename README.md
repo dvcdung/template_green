@@ -1,2 +1,1 @@
-# đá đi e ơi
-adu
+# Basic template
